@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repostería Dulce Encanto - Ubicación y Contacto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Dulce Encanto Repostería</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="postres.html">Postres</a></li>
+        <li><a href="pasteles.html">Pasteles</a></li>
+        <li><a href="ubicacion.html" class="active">Ubicación</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="contenedor">
+    <main>
+      <section>
+        <h2>Nuestra Ubicación</h2>
+        <p>Visítanos en nuestra sucursal o envíanos tus dudas sobre pedidos especiales.</p>
+        
+        <!-- Elemento Multimedia Embebido (Google Maps) -->
+        <div class="mapa-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117763.56707327318!2d-117.0382471!3d32.5149469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9390fe12523e1%3A0x6a0c00d6e6f1a8e9!2sTijuana%2C%20B.C.!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </section>
+
+      <section style="margin-top: 2rem;">
+        <h3>Contáctanos / Haz tu Pedido</h3>
+        
+        <!-- Formulario Validado con prevención de error al enviar -->
+        <form class="formulario-contacto" id="formContacto">
+          <div class="grupo-campo">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="mensaje">Mensaje o Pedido Especial:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Detalla aquí tu pedido o consulta..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
+      </section>
+    </main>
+
+    <aside>
+      <h3>Dirección</h3>
+      <p>Av. Benito Juárez #123</p>
+      <p>Zona Centro, Tijuana, B.C.</p>
+      <br>
+      <h3>Contacto</h3>
+      <p><strong>Teléfono:</strong> (664) 123-4567</p>
+      <p><strong>Email:</strong> contacto@dulceencanto.com</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Dulce Encanto Repostería - Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Manejo del envío del formulario para evitar que marque error en la página
+    document.getElementById('formContacto').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('¡Gracias! Tu mensaje ha sido enviado correctamente.');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
